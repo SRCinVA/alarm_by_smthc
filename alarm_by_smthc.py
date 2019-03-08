@@ -1,12 +1,13 @@
-import winsound, time, os, platform
+import subprocess, time, os, platform #note time module
+# OSX has no winsound equivalent; subprocess might make this doable.
+# for a tutorial on this: https://www.youtube.com/watch?v=OMP3EozC5Zw
 
+#subprocess.call(["afplay", "<your_soundfile>"])
 
 def sound():
 
-	for i in range(2): # Number of repeats
-		
+	for i in range(2): # Number of repeats		
 		for j in range(9): # Number of beeps
-			
 			winsound.MessageBeep(-1) # Sound played
 		
 		time.sleep(2) # How long between beeps
