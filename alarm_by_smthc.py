@@ -19,6 +19,7 @@ def alarm(n):
 	time.sleep(n) # Waits 'n' seconds before playing sound
 	
 	sound()
+    # this could be it, or something like it, from the pong game: os.system("afplay boink.wav&")
 
 def input_destinations(user_input):
 
@@ -69,6 +70,6 @@ def main():
 	
 	input_destinations(main_input)
 
-	return;
+	return
 
 main()
