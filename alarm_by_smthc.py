@@ -6,11 +6,11 @@ import subprocess, time, os, platform #note time module
 
 def sound():
 
-	for i in range(2): # Number of repeats		
-		for j in range(9): # Number of beeps
-			winsound.MessageBeep(-1) # Sound played
-		
-		time.sleep(2) # How long between beeps
+    for i in range(2): # Number of repeats		
+        for j in range(9):# Number of beeps
+            #winsound.MessageBeep(-1) #makes sound
+            os.system("afplay shortbeep.m4a&")
+        time.sleep(2) # How long between beeps
 
 def alarm(n):
 	
@@ -19,7 +19,6 @@ def alarm(n):
 	time.sleep(n) # Waits 'n' seconds before playing sound
 	
 	sound()
-    # this could be it, or something like it, from the pong game: os.system("afplay boink.wav&")
 
 def input_destinations(user_input):
 
@@ -66,7 +65,7 @@ def input_destinations(user_input):
 
 def main():
 	print("What unit of time do you want to wait?\n (1) Hours\n (2) Minutes\n (3) Seconds\n (4) Combination")
-	main_input = input(": ")
+	main_input = input(": ") #need to enter it as a string.
 	
 	input_destinations(main_input)
 
